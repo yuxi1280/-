@@ -21,35 +21,35 @@
 .
 ├── src/                          # 源代码文件夹
 │   ├── main.c                    # 主程序入口
-│   ├── uart.c                    # UART串口驱动
-│   ├── rs485.c                   # RS485通信驱动
-│   ├── spi.c                     # SPI接口驱动
-│   ├── crc16_modbus.c            # Modbus CRC校验算法
-│   ├── encoder.c                 # 编码器驱动
-│   ├── pid_pos.c                 # 位置PID控制
-│   ├── pid_speed.c               # 速度PID控制
-│   ├── moto.c                    # 电机控制
-│   ├── flash.c                   # Flash存储管理
+│   ├── uart.c                    # UART串口驱动│   ├── uart.c                    # UART serial port driver│   ├── uart.c                    # UART 串口驱动程序
+│   ├── rs485.c                   # RS485通信驱动│   ├── rs485.c                   # RS485 communication driver│   ├── rs485.c                   # RS485 通信驱动程序
+│   ├── spi.c                     # SPI接口驱动│   ├── spi.c                     # SPI interface driver
+│   ├── crc16_modbus.c            # Modbus CRC校验算法│   ├── crc16_modbus.c            # Modbus CRC check algorithm
+│   ├── encoder.c                 # 编码器驱动│   ├── encoder.c                 # Encoder driver
+│   ├── pid_pos.c                 # 位置PID控制│   ├── pid_pos.c                 # Position PID control
+│   ├── pid_speed.c               # 速度PID控制│   ├── pid_speed.c               # Speed PID control
+│   ├── moto.c                    # 电机控制│   ├── moto.c                    # Motor control
+│   ├── flash.c                   # Flash存储管理│   ├── flash.c                   # Flash storage management
 │   ├── at24c02.c                 # 24C02 EEPROM驱动
-│   ├── ws2812.c                  # WS2812 RGB灯控制
-│   ├── soft_timer.c              # 软定时器
-│   ├── ir_comm.c                 # 红外通信
-│   ├── relay_ctrl.c              # 继电器控制
+│   ├── ws2812.c                  # WS2812 RGB灯控制│   ├── ws2812.c                  # WS2812 RGB LED control
+│   ├── soft_timer.c              # 软定时器│   ├── soft_timer.c              # Soft Timer
+│   ├── ir_comm.c                 # 红外通信│   ├── ir_comm.c                 # Infrared communication
+│   ├── relay_ctrl.c              # 继电器控制│   ├── relay_ctrl.c              # Relay control
 │   ├── msg.c                     # 消息队列系统
-│   ├── doraemon_pack.c           # 数据打包协议
-│   ├── io.c                      # GPIO输入输出
-│   └── mix_std_lib.c             # 混合标准库函数
+│   ├── doraemon_pack.c           # 数据打包协议│   ├── doraemon_pack.c           # Data packaging protocol
+│   ├── io.c                      # GPIO输入输出│   ├── io.c                      # GPIO input and output
+│   └── mix_std_lib.c             # 混合标准库函数│   └── mix_std_lib.c             # Mixed standard library functions
 │
 ├── inc/                          # 头文件夹
 │   ├── uart.h, rs485.h, ...      # 对应的头文件定义
 │
 ├── sys/                          # 系统文件
-│   ├── startup_hc32f460.s        # ARM汇编启动代码
-│   └── cmsis/                    # CMSIS标准库
-│       └── core/                 # ARM Cortex-M4核心头文件
+│   ├── startup_hc32f460.s        # ARM汇编启动代码│   ├── startup_hc32f460.s        # ARM assembly startup code
+│   └── cmsis/                    # CMSIS标准库│   └── cmsis/                    # CMSIS standard library
+│       └── core/                 # ARM Cortex-M4核心头文件│       └── core/                 # ARM Cortex-M4 core header files
 │
-├── build/                        # 编译配置
-│   └── makefile                  # GNU Make编译脚本
+├── build/                        # 编译配置├── build/                        # Build configuration
+│   └── makefile                  # GNU Make编译脚本│   └── makefile                  # GNU Make build script
 │
 ├── obj/                          # 编译生成的目标文件
 │   └── EPC_DCBM.dis              # 反汇编文件
@@ -178,7 +178,7 @@ arm-none-eabi-gdb obj/EPC_DCBM.elf
 
 ### 示例1: 基础串口通信
 
-```c
+```c   ' ' ' c
 #include "uart.h"
 
 int main(void) {
@@ -322,11 +322,6 @@ arm-none-eabi-gdb obj/EPC_DCBM.elf
 - 为复杂逻辑添加注释
 - 新功能需附带单元测试
 
-## 📞 联系方式
-
-- 📧 Email: your-email@example.com
-- 💬 讨论区: GitHub Discussions
-- 🐛 Bug报告: GitHub Issues
 
 ## 🙏 致谢
 
